@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div id="home">
+  <p>
+    Starting from scratch. Logging stuff here. 🫡
+  </p>
+
+  <div>
+
+    {% for post in site.posts %}
+    {% if post.is_post %}
+    <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li> -->
+    <a href="{{ post.url }}">{{ post.title }}</a></br>
+    {%- endif %}
+    {% endfor %}
+  </div>
+
+</div>
